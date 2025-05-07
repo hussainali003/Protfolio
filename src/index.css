@@ -1,0 +1,14 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+html,
+body,
+#root { /* Or whatever the id of your main React mounting div is */
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  @apply bg-primary text-white font-mono;
+  margin: 0;
+}
