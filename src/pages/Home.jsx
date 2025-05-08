@@ -4,7 +4,7 @@ export default function Home() {
             <div className="absolute top-[15%] right-[15%] w-[35%] h-[40%] bg-intermediate opacity-40 rounded-full blur-[80px] rotate-25 -translate-x-0 z-10"></div>
             <div className="absolute bottom-[15%] right-0 w-[35%] h-[40%] bg-blue-500 opacity-30 rounded-full blur-[80px] rotate-120 -translate-x-0 z-5"></div>
             <div className="grow-1"></div>
-            <div className="">
+            <div className="mb-20">
                 <p className="text-md text-gray-400">Hi all. I am</p>
                 <h1 className="text-6xl font-light">Hussain Ali</h1>
                 <h2 className="text-3xl text-bluish">&gt; Front-end developer</h2>
@@ -37,7 +37,7 @@ export default function Home() {
                     {/* Add other links here like github, behance, linkedin */}
                 </div>
             </div>
-            <div className="grow-3"></div>
+            <div className="grow-[2.5]"></div>
         </div>
     );
   }

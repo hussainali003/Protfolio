@@ -2,7 +2,7 @@ import { FaGithub, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <nav className="flex mt-20 border-t border-line text-sm ">
+        <nav className="flex border-t border-line text-sm ">
           <div className="px-4 py-4  border-r border-line  text-intermediate hover:text-white cursor-pointer">find me in:</div>
           <div className="items-center px-4 py-4  border-r border-line  text-intermediate/60 hover:text-white cursor-pointer">
             <a href="https://www.facebook.com/profile.php?id=100028481423294">
