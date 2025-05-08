@@ -8,7 +8,12 @@ export default {
           mono: ['Fira Code', 'monospace'],
         },
         colors: {
-          primary: "#0f172a",
+          primary: "#010C15",
+          secondary: "#011627",
+          line: '#133954',
+          intermediate: '#10b981',
+          bluish: '#4E5CD1',
+          string: "#D2857E"
         },
       },
     },
