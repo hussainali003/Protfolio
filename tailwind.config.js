@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -13,9 +15,14 @@ export default {
           line: '#133954',
           intermediate: '#10b981',
           bluish: '#4E5CD1',
-          string: "#D2857E"
+          string: "#D2857E",
+          const: "#2D7AD6",
+          keyword: '#34B5FF',
+          property: '#7CDCF1',
+          function: '#D0cE81',
+          condition: '#A463b3'
         },
       },
     },
-    plugins: [],
+    plugins: [require('tailwind-scrollbar'),],
 };
