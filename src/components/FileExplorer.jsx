@@ -48,7 +48,7 @@ export default function FileExplorer() {
                     <p className='text-md text-white'>bio</p>
                 </button>
                 {selectedFolder[0].hasOpen && (
-                    <button onClick={() => handleFileClick('bio.me')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${selectedFile === 'bio.me' ? 'bg-white/10' : ''}`}>
+                    <button onClick={() => handleFileClick('bio.me')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${selectedFile === 'bio.me' ? 'bg-white/10' : 'hover:text-white'}`}>
                         <CiHashtag className='min-w-[24px]' color='#D2857E' />
                         <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>bio.me</p>
                     </button>
@@ -60,11 +60,11 @@ export default function FileExplorer() {
                 </button>
                 {selectedFolder[1].hasOpen && (
                     <>
-                        <button onClick={() => handleFileClick('index.jsx')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${selectedFile === 'index.jsx' ? 'bg-white/10' : ''}`}>
+                        <button onClick={() => handleFileClick('index.jsx')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${selectedFile === 'index.jsx' ? 'bg-white/10' : 'hover:text-white'}`}>
                             <FaReact className='min-w-[24px]' color='#10b981' />
                             <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>index.jsx</p>
                         </button>
-                        <button onClick={() => handleFileClick('certificate.jsx')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${selectedFile === 'certificate.jsx' ? 'bg-white/10' : ''}`}>
+                        <button onClick={() => handleFileClick('certificate.jsx')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${selectedFile === 'certificate.jsx' ? 'bg-white/10' : 'hover:text-white'}`}>
                             <FaReact className='min-w-[24px]' color='#10b981' />
                             <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>certificate.jsx</p>
                         </button>
