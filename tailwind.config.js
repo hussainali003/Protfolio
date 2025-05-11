@@ -21,7 +21,8 @@ export default {
           property: '#7CDCF1',
           function: '#D0cE81',
           condition: '#A463b3',
-          number: '#6E7681'
+          number: '#6E7681',
+          modified: '#fcca92',
         },
       },
     },

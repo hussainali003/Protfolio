@@ -1,3 +1,6 @@
+// import useState from react
+import {useState} from 'react';
+
 // Import icons from react-icons 
 import { TfiFiles } from "react-icons/tfi";
 import { VscSourceControl } from "react-icons/vsc";
@@ -7,7 +10,17 @@ import { VscExtensions } from "react-icons/vsc";
 import FileExplorer from './components/FileExplorer.jsx';
 import CodeArea from './components/CodeArea.jsx';
 
+// import image from assets
+import VsCodeIcon from '../../assets/images/vsCodeSvg.svg';
+
+
 export default function About() {
+  const [selectedFile, setSelectedFile] = useState('bio.me');
+
+  const onFileChange = (file) => {
+    setSelectedFile(file);
+  }
+  
   return (
     <div className='flex h-full overflow-hidden'> 
         {/* Left side of the screen */}
@@ -17,13 +30,21 @@ export default function About() {
             <VscExtensions className='hover:text-white' fontSize={24}/>
         </div>
         {/* Right side of the screen */}
-        <div className='flex h-full'>
-            <FileExplorer />
+        <div className='flex w-full h-full'>
+            <FileExplorer file={selectedFile} onFileChange={onFileChange} />
             {/* Code Area */}
-            <CodeArea />
+            {selectedFile === null ? (
+              <div className='h-full flex grow items-center justify-center'>
+                <img src={VsCodeIcon} className="w-[35%] h-[50%] filter grayscale invert opacity-10"/>
+              </div>
+            ) : (
+              <>
+                <CodeArea file={selectedFile} onFileChange={onFileChange} />
+                <div className='grow-[3.5]'>
+                </div>
+              </>
+            )}
             {/* Terminal */}
-            <div className='grow-[3.5] '>
-            </div>
         </div>
     </div>
   );
