@@ -1,5 +1,5 @@
 // import custom components from components
-import CodeLines from "./codeLines";
+import CodeLines from "./CodeLines";
 
 // import icons from react-icons
 import { CiHashtag } from "react-icons/ci";
