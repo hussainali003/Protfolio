@@ -1,13 +1,11 @@
-import React from 'react';
-
 // Import icons from react-icons 
 import { TfiFiles } from "react-icons/tfi";
 import { VscSourceControl } from "react-icons/vsc";
 import { VscExtensions } from "react-icons/vsc";
 
-// import components
-import FileExplorer from '../components/FileExplorer.jsx';
-import CodeArea from '../components/CodeArea.jsx';
+// import custom components from components
+import FileExplorer from './components/FileExplorer.jsx';
+import CodeArea from './components/CodeArea.jsx';
 
 export default function About() {
   return (
