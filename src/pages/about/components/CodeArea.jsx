@@ -14,9 +14,9 @@ export default function CodeArea({file, onFileChange}) {
     }
 
     return (
-        <div className='max-w-[55%] h-full flex flex-col grow-3 overflow-y-auto border-r border-r-line'>
+        <div className='h-full flex flex-col grow-3 border-r border-r-line'>
             {/* Header */}
-            <div className=' flex items-center  border-b border-b-line'>
+            <div className='flex items-center  border-b border-b-line'>
                 <div className="flex items-center gap-x-1 px-2 py-2">
                     <div className="flex items-center">
                         {file === 'bio.me' ? (

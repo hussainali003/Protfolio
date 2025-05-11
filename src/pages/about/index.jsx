@@ -3,8 +3,10 @@ import {useState} from 'react';
 
 // Import icons from react-icons 
 import { TfiFiles } from "react-icons/tfi";
-import { VscSourceControl } from "react-icons/vsc";
+import { FaCaretDown } from "react-icons/fa";
 import { VscExtensions } from "react-icons/vsc";
+import { VscSourceControl } from "react-icons/vsc";
+
 
 // import custom components from components
 import FileExplorer from './components/FileExplorer.jsx';
@@ -12,6 +14,7 @@ import CodeArea from './components/CodeArea.jsx';
 
 // import image from assets
 import VsCodeIcon from '../../assets/images/vsCodeSvg.svg';
+import Chat from './components/Chat.jsx';
 
 
 export default function About() {
@@ -31,20 +34,21 @@ export default function About() {
         </div>
         {/* Right side of the screen */}
         <div className='flex w-full h-full'>
+            {/* File Explorer */}
             <FileExplorer file={selectedFile} onFileChange={onFileChange} />
             {/* Code Area */}
             {selectedFile === null ? (
-              <div className='h-full flex grow items-center justify-center'>
+              <div className='h-full flex grow items-center justify-center border-r border-r-line '>
                 <img src={VsCodeIcon} className="w-[35%] h-[50%] filter grayscale invert opacity-10"/>
               </div>
             ) : (
               <>
+                {/* Code */}
                 <CodeArea file={selectedFile} onFileChange={onFileChange} />
-                <div className='grow-[3.5]'>
-                </div>
               </>
             )}
-            {/* Terminal */}
+            {/* Chat */}
+            <Chat file={selectedFile} />
         </div>
     </div>
   );
