@@ -20,7 +20,8 @@ export default {
           keyword: '#34B5FF',
           property: '#7CDCF1',
           function: '#D0cE81',
-          condition: '#A463b3'
+          condition: '#A463b3',
+          number: '#6E7681'
         },
       },
     },
