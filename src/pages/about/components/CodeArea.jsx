@@ -5,6 +5,7 @@ import BioFile from "./BioFile";
 import { CiHashtag } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { FaReact } from "react-icons/fa";
+import SkillsFile from "./skillsFile";
 
 export default function CodeArea({file, onFileChange}) {
     const isFileTypeBio = file === "bio.me" ? true: false;
@@ -38,6 +39,9 @@ export default function CodeArea({file, onFileChange}) {
             {/* Code Area */}
             {file === 'bio.me' && (
                 <BioFile />
+            )}
+            {file === 'index.jsx' && (
+                <SkillsFile />
             )}
         </div> 
     );
