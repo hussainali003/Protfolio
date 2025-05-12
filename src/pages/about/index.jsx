@@ -3,7 +3,6 @@ import {useState} from 'react';
 
 // Import icons from react-icons 
 import { TfiFiles } from "react-icons/tfi";
-import { FaCaretDown } from "react-icons/fa";
 import { VscExtensions } from "react-icons/vsc";
 import { VscSourceControl } from "react-icons/vsc";
 
@@ -11,6 +10,8 @@ import { VscSourceControl } from "react-icons/vsc";
 // import custom components from components
 import FileExplorer from './components/FileExplorer.jsx';
 import CodeArea from './components/CodeArea.jsx';
+
+import SkillsInfo from './components/skillsFile/components/SkillsInfo.jsx'; 
 
 // import image from assets
 import VsCodeIcon from '../../assets/images/vsCodeSvg.svg';
@@ -51,7 +52,7 @@ export default function About() {
             {selectedFile !== "index.jsx" ? (
               <Chat file={selectedFile} />
             ) : (
-              <div>index</div>
+              <SkillsInfo />
             )}
         </div>
     </div>
