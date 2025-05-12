@@ -1,11 +1,12 @@
 // import custom components from components
 import BioFile from "./BioFile";
+import SkillsFile from "./skillsFile";
+import CertificateFile from "./certificateFile";
 
 // import icons from react-icons
 import { CiHashtag } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { FaReact } from "react-icons/fa";
-import SkillsFile from "./skillsFile";
 
 export default function CodeArea({file, onFileChange}) {
     const isFileTypeBio = file === "bio.me" ? true: false;
@@ -42,6 +43,9 @@ export default function CodeArea({file, onFileChange}) {
             )}
             {file === 'index.jsx' && (
                 <SkillsFile />
+            )}
+            {file === "certificate.jsx" && (
+                <CertificateFile />
             )}
         </div> 
     );
