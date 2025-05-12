@@ -25,7 +25,7 @@ export default function BioChat() {
                 <p className='text-purple-400'>GitHub Copilot</p>
             </div>
             <p className='px-2 pt-2 text-number '>{'>'} Used 4 reference</p>
-            <p className='pt-2 text-sky-300'>Hi there! Can you tell me a bit about yourself?</p>
+            <p className='pt-2 text-sky-300'>What do you enjoy doing outside of programming?</p>
             <div className="flex items-center gap-x-2 py-4">
                 <img src={githubProfile} className='size-5 text-white rounded-full'/>
                 <p className='text-sky-400'>hussainali003</p>

@@ -48,7 +48,11 @@ export default function About() {
               </>
             )}
             {/* Chat */}
-            <Chat file={selectedFile} />
+            {selectedFile !== "index.jsx" ? (
+              <Chat file={selectedFile} />
+            ) : (
+              <div>index</div>
+            )}
         </div>
     </div>
   );

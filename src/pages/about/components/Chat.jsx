@@ -18,8 +18,6 @@ export default function Chat({file}) {
         switch (activeFile) {
             case "bio.me":
                 return <BioChat />;
-            case "index.jsx":
-                return <div>index</div>
             case "certificate.jsx":
                 return <div>certificate</div>;
             default:
