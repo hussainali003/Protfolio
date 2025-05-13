@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react';
 
-// import BioChat from bio components
+// import BioChat from components
 import BioChat from "./bioFile/components/bioChat"
+import CertificateChat from "./certificateFile/components/CertificateChat"
 
 export default function Chat({file}) {
     const [prevFile, setPrevFile] = useState('bio.me');
@@ -19,7 +20,7 @@ export default function Chat({file}) {
             case "bio.me":
                 return <BioChat />;
             case "certificate.jsx":
-                return <div>certificate</div>;
+                return <CertificateChat />
             default:
                 return null;
         }
