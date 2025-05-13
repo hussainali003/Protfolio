@@ -25,7 +25,7 @@ export default function BioAbout() {
             <p className="text-yellow-300 overflow-hidden text-ellipsis">{'}'}<span className="text-white">;</span></p>
             <br />
             {/* functions section */}
-            <p className="text-intermediate/70 overflow-hidden text-ellipsis">// Generate a mobile based on the provided type and design input</p>
+            <p className="text-intermediate/70 overflow-hidden text-ellipsis">// Create a website and mobile app based on the provided type and design input</p>
             <p className="overflow-hidden text-ellipsis"><span className="text-const">const</span> <span className="text-function">createWebsiteAndMobileApp</span> = <span className="text-yellow-300">{'('}</span><span className="text-property">type</span>, <span className="text-property">design</span><span className="text-yellow-300">{')'}</span>  = <span className="text-yellow-300">{'{'}</span></p>
             <p className="overflow-hidden text-ellipsis">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-const">const</span> <span className="text-keyword">appType</span> = <span className="text-keyword">whatIProvide</span><span className="text-condition">{'['}</span><span className="text-property">type</span><span className="text-condition">{']'}</span>;</p>
             <br />

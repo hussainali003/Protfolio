@@ -65,7 +65,7 @@ export default function FileExplorer({file, onFileChange}) {
                         </button>
                         <button onClick={() => handleFileClick('certificate.jsx')} className={`flex pl-10 gap-x-2 items-center text-gray-400 ${file === 'certificate.jsx' ? 'bg-white/10' : 'hover:text-white'}`}>
                             <FaReact className='min-w-[24px]' color='#6c74dd' />
-                            <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>certificate.jsx</p>
+                            <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>Certificate.jsx</p>
                         </button>
                     </>
                 )}

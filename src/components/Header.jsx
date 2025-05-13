@@ -31,8 +31,7 @@ export default function Header() {
           }>
             <p>_projects</p>
           </NavLink>
-          <div className="grow-4 border-r border-line" />
-          <div className="px-8 py-4  text-intermediate hover:text-white cursor-pointer">_contact-me</div>
+          <div className="grow-4" />
         </nav>
     )
 }

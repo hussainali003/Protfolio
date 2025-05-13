@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
 // import BioChat from components
-import BioChat from "./bioFile/components/bioChat"
+import BioChat from "./bioFile/components/BioChat"
 import CertificateChat from "./certificateFile/components/CertificateChat"
 
 export default function Chat({file}) {
@@ -11,7 +11,6 @@ export default function Chat({file}) {
         if (file !== null) {
             setPrevFile(file);
         }
-
     }, [file])
 
     const renderChatContent = () => {
