@@ -1,8 +1,41 @@
 // import image from assets
+import { useState } from 'react';
 import CopilotIcon from '../../../../../assets/images/copilotSvg.svg'
 import githubProfile from '../../../../../assets/images/githubProfile.jpg'
 
+// Import icons from react-icons 
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa6";
+import { CiHashtag } from "react-icons/ci";
+
+
 export default function BioChat() {
+    const [selectReference, setSelectReference] = useState([]);
+
+    const handleReferenecToggle = (reference) => {
+        setSelectReference((prev) => {
+            const hasRefExist = prev.find((file) => file.index === reference);
+            
+            if (hasRefExist) {
+                return selectReference.map((file) => {
+                    if (file.index === hasRefExist.index) {
+                        return {
+                            index: file.index,
+                            hasReferenceOpen: !file.hasReferenceOpen
+                        }
+                    } else {
+                        return file;
+                    }
+                })
+            } else {
+                return [...selectReference, {
+                    index: reference,
+                    hasReferenceOpen: true,
+                }]
+            }
+        })
+    }
+
     return (
         <div className="h-full w-full py-2 px-2 text-sm text-slate-300 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-900 hover:scrollbar-thumb-gray-400">
             <div className="flex items-center gap-x-2">
@@ -11,8 +44,17 @@ export default function BioChat() {
                 </div>
                 <p className='text-purple-400'>GitHub Copilot</p>
             </div>
-            <p className='px-2 pt-2 text-number '>{'>'} Used 1 reference</p>
-            <p className='pt-2 text-sky-300'>Hi hussainali003! Can you tell me a bit about yourself?</p>
+            <button onClick={() => handleReferenecToggle(0)} className='flex items-center justify-center gap-x-2 px-2 py-1 my-1 text-number rounded-md hover:text-white/70 hover:bg-white/5 cursor-pointer'>
+                {selectReference[0]?.hasReferenceOpen ? (<FaChevronDown fontSize={10} />) : (<FaChevronRight fontSize={10} />)}
+                <p>Used 1 reference</p>
+            </button>
+            {selectReference[0]?.hasReferenceOpen && (
+                <div className='flex items-center gap-x-2 border px-2 py-1 mt-1 mb-2 border-line rounded-md'>
+                    <CiHashtag color='#D2857E'/>
+                    <p>bio.me</p>
+                </div>
+            )}
+            <p className='text-sky-300'>Hi hussainali003! Can you tell me a bit about yourself?</p>
             <div className="flex items-center gap-x-2 py-4">
                 <img src={githubProfile} className='size-5 text-white rounded-full'/>
                 <p className='text-sky-400'>hussainali003</p>
@@ -24,8 +66,17 @@ export default function BioChat() {
                 </div>
                 <p className='text-purple-400'>GitHub Copilot</p>
             </div>
-            <p className='px-2 pt-2 text-number '>{'>'} Used 4 reference</p>
-            <p className='pt-2 text-sky-300'>What do you enjoy doing outside of programming?</p>
+            <button onClick={() => handleReferenecToggle(1)} className='flex items-center justify-center gap-x-2 px-2 py-1 my-1 text-number rounded-md hover:text-white/70 hover:bg-white/5 cursor-pointer'>
+                {selectReference[1]?.hasReferenceOpen ? (<FaChevronDown fontSize={10} />) : (<FaChevronRight fontSize={10} />)}
+                <p>Used 1 reference</p>
+            </button>
+            {selectReference[1]?.hasReferenceOpen && (
+                <div className='flex items-center gap-x-2 border px-2 py-1 mt-1 mb-2 border-line rounded-md'>
+                    <CiHashtag color='#D2857E'/>
+                    <p>bio.me</p>
+                </div>
+            )}
+            <p className='text-sky-300'>What do you enjoy doing outside of programming?</p>
             <div className="flex items-center gap-x-2 py-4">
                 <img src={githubProfile} className='size-5 text-white rounded-full'/>
                 <p className='text-sky-400'>hussainali003</p>
