@@ -22,7 +22,7 @@ export default function Header() {
           }>
             <p>_about-me</p>
           </NavLink>
-          <NavLink to="/projects" className={({ isActive }) =>
+          {/* <NavLink to="/projects" className={({ isActive }) =>
             `px-8 py-4 border-r border-line ${
               isActive
                 ? "text-white border-b-2 border-b-orange-500"
@@ -30,7 +30,7 @@ export default function Header() {
             }`
           }>
             <p>_projects</p>
-          </NavLink>
+          </NavLink> */}
           <div className="grow-4" />
         </nav>
     )

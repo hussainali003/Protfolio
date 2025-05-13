@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // pages
-import Projects from "./pages/Project";
+// import Projects from "./pages/Project";
 import About from "./pages/about";
 import Home from './pages/Home';
 import NoPage from "./pages/NoPage";
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
+            {/* <Route path="/projects" element={<Projects />} /> */}
             <Route path="*" element={<NoPage />} />
           </Routes>
         <Footer />
