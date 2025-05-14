@@ -44,10 +44,10 @@ export default function BioChat() {
                 <p className='text-purple-400'>GitHub Copilot</p>
             </div>
             <button onClick={() => handleReferenecToggle(0)} className='flex items-center justify-center gap-x-2 px-2 py-1 my-1 text-number rounded-md hover:text-white/70 hover:bg-white/5 cursor-pointer'>
-                {selectReference[0]?.hasReferenceOpen ? (<FaChevronDown fontSize={10} />) : (<FaChevronRight fontSize={10} />)}
+                {selectReference.find((file) => file.index === 0)?.hasReferenceOpen ? (<FaChevronDown fontSize={10} />) : (<FaChevronRight fontSize={10} />)}
                 <p>Used 1 reference</p>
             </button>
-            {selectReference[0]?.hasReferenceOpen && (
+            {selectReference.find((file) => file.index === 0)?.hasReferenceOpen && (
                 <div className='flex items-center gap-x-2 border px-2 py-1 mt-1 mb-2 border-line rounded-md'>
                     <FaReact color='#6c74dd'/>
                     <p>Certificate.jsx</p>
@@ -67,10 +67,10 @@ export default function BioChat() {
             </div>
             <p className='pt-2 text-sky-300'>hussainali003, could you tell me more about your Responsive Web Design Certificate—what did you learn and how did you apply those skills?</p>
             <button onClick={() => handleReferenecToggle(1)} className='flex items-center justify-center gap-x-2 px-2 py-1 my-1 text-number rounded-md hover:text-white/70 hover:bg-white/5 cursor-pointer'>
-                {selectReference[1]?.hasReferenceOpen ? (<FaChevronDown fontSize={10} />) : (<FaChevronRight fontSize={10} />)}
+                {selectReference.find((file) => file.index === 1)?.hasReferenceOpen ? (<FaChevronDown fontSize={10} />) : (<FaChevronRight fontSize={10} />)}
                 <p>Used 1 reference</p>
             </button>
-            {selectReference[1]?.hasReferenceOpen && (
+            {selectReference.find((file) => file.index === 1)?.hasReferenceOpen && (
                 <div className='flex items-center gap-x-2 border px-2 py-1 mt-1 mb-2 border-line rounded-md'>
                     <FaReact color='#6c74dd'/>
                     <p>Certificate.jsx</p>
