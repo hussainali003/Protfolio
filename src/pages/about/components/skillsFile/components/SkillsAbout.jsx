@@ -1,6 +1,6 @@
 export default function SkillsAbout() {
     return (
-        <div className="w-full h-full flex text-number/70 leading-6 flex-col pt-2 pr-2 ">
+        <div className="w-full h-full flex max-[640px]:text-[12px] text-number/70 leading-6 flex-col pt-2 pr-2 ">
             {/** first **/}
             <p>/**</p>
             <div className="pl-4">

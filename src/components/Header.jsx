@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
-        <nav className="flex text-sm border-b border-line">
+        <nav className="max-[640px]:text-[12px] flex border-b border-line text-sm">
           <div className="grow-1 pl-4 pr-4 py-4 border-r border-line text-intermediate">hussain-ali</div>
           <NavLink to="/" className={({ isActive }) =>
             `px-8 py-4 border-r border-line ${
@@ -20,7 +20,7 @@ export default function Header() {
                 : "text-gray-400 hover:text-white"
             }`
           }>
-            <p>_about-me</p>
+            <p>_about</p>
           </NavLink>
           {/* <NavLink to="/projects" className={({ isActive }) =>
             `px-8 py-4 border-r border-line ${
@@ -31,7 +31,7 @@ export default function Header() {
           }>
             <p>_projects</p>
           </NavLink> */}
-          <div className="grow-4" />
+          <div className="max-[640px]:hidden grow-4" />
         </nav>
     )
 }

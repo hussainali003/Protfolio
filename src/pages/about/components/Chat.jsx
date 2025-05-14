@@ -30,7 +30,7 @@ export default function Chat({file}) {
     };
 
     return (
-        <div className='max-w-[350px] min-w-[350px] h-full flex flex-col grow-[3.5]'>
+        <div className='max-[1280px]:hidden max-w-[350px] min-w-[350px] h-full flex flex-col grow-[3.5]'>
             <div className='flex px-4 border-b border-b-line'>
                 <div className='flex items-center py-2 '>
                     <p className={`text-md whitespace-nowrap overflow-hidden text-ellipsis ${file === "index.jsx" && 'invisible'}`}>CHAT</p>

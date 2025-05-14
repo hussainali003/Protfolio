@@ -2,16 +2,16 @@ import { FaGithub, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <nav className="flex border-t border-line text-sm ">
-          <div className="px-4 py-4  border-r border-line  text-intermediate">find me in:</div>
-          <div className="items-center px-4 py-4  border-r border-line  text-intermediate/60 hover:text-white cursor-pointer">
+        <nav className="max-[640px]:text-[12px] flex border-t border-line text-sm ">
+          <div className="max-[640px]:hidden px-4 py-4  border-r border-line  text-intermediate">find me in:</div>
+          <div className="flex items-center px-4 py-4  border-r border-line  text-intermediate/60 hover:text-white cursor-pointer">
             <a target="_blank" href="https://www.facebook.com/profile.php?id=100028481423294">
-              <FaFacebookF size={18}/>
+              <FaFacebookF/>
             </a>
           </div>
-          <div className="items-center px-4 py-4  border-r border-line  text-intermediate/60 hover:text-white cursor-pointer">
+          <div className="flex items-center px-4 py-4  border-r border-line  text-intermediate/60 hover:text-white cursor-pointer">
             <a target="_blank" href="https://www.linkedin.com/in/hussain-ali-755120295/">
-              <FaLinkedinIn size={18}/>
+              <FaLinkedinIn/>
             </a>
           </div>
           <div className="grow border-r border-line"></div>

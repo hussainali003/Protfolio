@@ -1,15 +1,14 @@
 export default function Home() {
     return (
-        <div className='flex grow items-end'>
+        <div className='flex grow'>
             <div className="absolute top-[15%] right-[15%] w-[35%] h-[40%] bg-intermediate opacity-40 rounded-full blur-[80px] rotate-25 -translate-x-0 z-10"></div>
             <div className="absolute bottom-[15%] right-0 w-[35%] h-[40%] bg-blue-500 opacity-30 rounded-full blur-[80px] rotate-120 -translate-x-0 z-5"></div>
-            <div className="grow-1"></div>
-            <div className="mb-20">
-                <p className="text-md text-gray-400">Hi all. I am</p>
-                <h1 className="text-6xl font-light">Hussain Ali</h1>
-                <h2 className="text-3xl text-bluish">&gt; Front-end developer</h2>
+            <div className="max-[450px]:ml-3 max-[640px]:ml-[10%] ml-[20%] mr-auto mt-auto mb-auto">
+                <p className="max-[1280px]:text-[12px] max-[640px]:text-[10px] max-[450px]:text-[8px] text-md text-gray-400">Hi all. I am</p>
+                <h1 className="max-[1280px]:text-4xl max-[640px]:text-2xl max-[450px]:text-md text-6xl font-light">Hussain Ali</h1>
+                <h2 className="max-[1280px]:text-xl max-[640px]:text-md max-[450px]:text-[12px] text-3xl text-bluish">&gt; Front-end developer</h2>
                 <br />
-                <div className="text-sm leading-7">
+                <div className="max-[1280px]:text-[10px] text-sm leading-7">
                     <p className="text-gray-400">// my number</p>
                     <p className="text-bluish">
                     const <span className="text-intermediate">phoneNum</span> ={" "}
@@ -37,7 +36,6 @@ export default function Home() {
                     {/* Add other links here like github, behance, linkedin */}
                 </div>
             </div>
-            <div className="grow-[2.5]"></div>
         </div>
     );
   }

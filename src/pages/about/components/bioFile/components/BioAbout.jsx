@@ -1,6 +1,6 @@
 export default function BioAbout() {
     return (
-        <div className="pt-2 pr-2">
+        <div className="pt-2 pr-2 max-[640px]:text-[12px]">
             {/* about section */}
             <p className="text-intermediate/70 overflow-hidden text-ellipsis">/* eslint-disable no-contact-provide */</p>
             <p className="overflow-hidden text-ellipsis"><span className="text-const">const</span> <span className="text-keyword">about</span> = <span className="text-yellow-300">{'{'}</span></p>

@@ -35,7 +35,7 @@ export default function FileExplorer({file, onFileChange}) {
     }
 
     return (
-        <div className='min-w-[230px] max-w-[230px] border-r-1 border-r-line'>
+        <div className='max-[1024px]:hidden min-w-[230px] max-w-[230px] border-r-1 border-r-line'>
             <div className='flex items-center gap-x-2 px-2 py-2 border-b-1 border-b-line'>
                 <FaCaretDown className='min-w-[24px]' fontSize={12}/>
                 <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>personal-info</p>
