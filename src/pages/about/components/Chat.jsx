@@ -22,7 +22,8 @@ export default function Chat({file}) {
             case "certificate.jsx":
                 return <CertificateChat />
             case "index.jsx":
-                return <SkillsChat />
+                // If file is null, render BioChat instead of SkillsChat
+                return file === null ? <BioChat /> : <SkillsChat />;
             default:
                 return null;
         }
