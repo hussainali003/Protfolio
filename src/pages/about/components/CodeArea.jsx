@@ -16,7 +16,7 @@ export default function CodeArea({file, onFileChange}) {
     }
 
     return (
-        <div className='h-full flex flex-col grow-3 border-r border-r-line'>
+        <div className='h-full min-w-[600px] flex flex-col grow-3 border-r border-r-line'>
             {/* Header */}
             <div className='flex items-center  border-b border-b-line'>
                 <div className="flex items-center gap-x-1 px-2 py-2">

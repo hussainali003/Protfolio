@@ -1,6 +1,6 @@
 export default function SkillsAbout() {
     return (
-        <div className="w-full min-w-[400px] h-full flex text-number/70 leading-6 flex-col pt-2 pr-2 ">
+        <div className="w-full h-full flex text-number/70 leading-6 flex-col pt-2 pr-2 ">
             {/** first **/}
             <p>/**</p>
             <div className="pl-4">
@@ -41,13 +41,3 @@ export default function SkillsAbout() {
         </div>
     )
 }
-
-// [HTML, CSS, JavaScript]
-// Learned from:
-// W3Schools — followed official documentation to understand core concepts and syntax.
-
-// Validated through:
-// FreeCodeCamp — completed interactive challenges and earned the Responsive Web Design Certificate.
-
-// Practical Experience::
-// Used HTML, CSS, and JavaScript fundamentals while working with modern libraries and frameworks such as React and Tailwind CSS to build responsive, component-based UIs.

@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 
 // import BioChat from components
 import BioChat from "./bioFile/components/BioChat"
+import SkillsChat from './skillsFile/components/SkillsChat';
 import CertificateChat from "./certificateFile/components/CertificateChat"
 
 export default function Chat({file}) {
@@ -20,16 +21,18 @@ export default function Chat({file}) {
                 return <BioChat />;
             case "certificate.jsx":
                 return <CertificateChat />
+            case "index.jsx":
+                return <SkillsChat />
             default:
                 return null;
         }
     };
 
     return (
-        <div className='max-w-[330px] min-w-[330px] h-full flex flex-col grow-[3.5]'>
+        <div className='max-w-[350px] min-w-[350px] h-full flex flex-col grow-[3.5]'>
             <div className='flex px-4 border-b border-b-line'>
                 <div className='flex items-center py-2 '>
-                    <p className='text-md whitespace-nowrap overflow-hidden text-ellipsis'>CHAT</p>
+                    <p className={`text-md whitespace-nowrap overflow-hidden text-ellipsis ${file === "index.jsx" && 'invisible'}`}>CHAT</p>
                 </div>
             </div>
             {/* chat */}

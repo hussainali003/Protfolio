@@ -11,8 +11,6 @@ import { VscSourceControl } from "react-icons/vsc";
 import FileExplorer from './components/FileExplorer.jsx';
 import CodeArea from './components/CodeArea.jsx';
 
-import SkillsInfo from './components/skillsFile/components/SkillsInfo.jsx'; 
-
 // import image from assets
 import VsCodeIcon from '../../assets/images/vsCodeSvg.svg';
 import Chat from './components/Chat.jsx';
@@ -49,11 +47,7 @@ export default function About() {
               </>
             )}
             {/* Chat */}
-            {selectedFile !== "index.jsx" ? (
-              <Chat file={selectedFile} />
-            ) : (
-              <SkillsInfo />
-            )}
+            <Chat file={selectedFile} />
         </div>
     </div>
   );
