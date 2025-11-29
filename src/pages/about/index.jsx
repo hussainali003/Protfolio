@@ -6,35 +6,43 @@ import { TfiFiles } from "react-icons/tfi";
 import { VscExtensions } from "react-icons/vsc";
 import { VscSourceControl } from "react-icons/vsc";
 
-
-// import custom components from components
-import FileExplorer from './components/FileExplorer.jsx';
-import CodeArea from './components/CodeArea.jsx';
-
 // import image from assets
 import VsCodeIcon from '../../assets/images/vsCodeSvg.svg';
-import Chat from './components/Chat.jsx';
 
+// import custom components from components
+import Chat from './components/Chat.jsx';
+import CodeArea from './components/CodeArea.jsx';
+import FileExplorer from './components/FileExplorer.jsx';
 
 export default function About() {
   const [selectedFile, setSelectedFile] = useState('bio.me');
+  const [fileExplorer, setFileExplorer] = useState(true);
+
 
   const onFileChange = (file) => {
     setSelectedFile(file);
+  }
+
+  const handleToggleFileExplorer = () => {
+    setFileExplorer(!fileExplorer);
   }
   
   return (
     <div className='flex h-full overflow-hidden'> 
         {/* Left side of the screen */}
         <div className='flex flex-col px-4 items-center gap-8 pt-6 text-gray-400 border-r-1 border-r-line'>
-            <TfiFiles className='hover:text-white' fontSize={24}/>
+            <button onClick={handleToggleFileExplorer}>
+              <TfiFiles className='hover:text-white' fontSize={24}/>
+            </button>
             <VscSourceControl className='hover:text-white' fontSize={24}/>
             <VscExtensions className='hover:text-white' fontSize={24}/>
         </div>
         {/* Right side of the screen */}
         <div className='flex w-full h-full'>
             {/* File Explorer */}
-            <FileExplorer file={selectedFile} onFileChange={onFileChange} />
+            {fileExplorer && (
+              <FileExplorer file={selectedFile} onFileChange={onFileChange} />
+            )}
             {/* Code Area */}
             {selectedFile === null ? (
               <div className='h-full flex grow items-center justify-center border-r border-r-line '>
