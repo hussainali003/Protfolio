@@ -1,7 +1,7 @@
 // import custom components from components
-import BioFile from "./BioFile";
-import SkillsFile from "./skillsFile";
-import CertificateFile from "./certificateFile";
+import BioFile from "./bioFile/index";
+import SkillsFile from "./skillsFile/index";
+import CertificateFile from "./certificateFile/index";
 
 // import icons from react-icons
 import { CiHashtag } from "react-icons/ci";
